@@ -1,0 +1,14 @@
+
+<h1>Item List</h1>
+
+{% if item_list %}
+
+    {% for item in item_list %}
+    <ul>
+        <li>
+            <a href="{% url 'food:detail' item.id %}">{{ item.id }} -- {{ item.item_name}}</a> 
+        </li>
+    </ul> 
+    {% endfor %}
+      
+{% endif %}
